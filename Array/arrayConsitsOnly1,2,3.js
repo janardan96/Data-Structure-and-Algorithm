@@ -49,10 +49,10 @@ function dutchNationalFlag(arr) {
             low++;
             mid++;
         }
-        if (arr[mid] === 1) {
+        else if (arr[mid] === 1) {
             mid++;
         }
-        if (arr[mid] === 2) {
+        else {
             swap(arr, mid, high);
             high--;
         }
