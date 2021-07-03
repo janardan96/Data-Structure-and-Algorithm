@@ -36,4 +36,4 @@ function interSection(arr1, arr2) {
 }
 
 // Array should be shorted;
-console.log(interSection([1, 2, 4, 5, 6], [2, 3, 4, 5, 7]));
+console.log(interSection([2, 3, 4, 5, 7], [1, 2, 4, 5, 6]));
