@@ -39,7 +39,7 @@ function mergeInterval(arr) {
 
 
 function mergeInterval2(intervals) {
-    debugger;
+    // debugger;
     intervals.sort((a, b) => a[0] - b[0])
     const res = [intervals[0]]
     for (let curr of intervals) {
