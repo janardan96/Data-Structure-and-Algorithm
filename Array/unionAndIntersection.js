@@ -26,7 +26,9 @@ function interSection(arr1, arr2) {
             j++
         }
         else {
-            arr.push(arr2[j]);
+            if (arr[arr.length - 1] !== arr1[i]) {
+                arr.push(arr1[i]);
+            }
             i++;
             j++
         }
