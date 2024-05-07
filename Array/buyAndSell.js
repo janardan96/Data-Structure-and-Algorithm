@@ -20,10 +20,10 @@ function buyAndSell(arr) {
 function buyAndSell2(array) {
     let min = array[0];
     let max = 0;
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 1; i < array.length; i++) {
         const diff = array[i] - min;
-        if (array[i] < min) min = array[i];
-        if (max < diff) max = diff;
+        max = Math.max(max, diff);
+        min = Math.min(min, array[i])
     }
     return max
 }
