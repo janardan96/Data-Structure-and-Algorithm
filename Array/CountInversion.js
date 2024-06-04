@@ -48,7 +48,7 @@ function mergeAndCount(arr, l, m, r) {
 }
 
 // Merge sort function
-function mergeSortAndCount(arr, l, r) {
+function mergeSortAndCount(arr, l = 0, r = arr.length - 1) {
 
     // Keeps track of the inversion count at a
     // particular node of the recursion tree
@@ -71,4 +71,71 @@ function mergeSortAndCount(arr, l, r) {
     return count;
 }
 
-console.log(mergeSortAndCount([1, 20, 6, 4, 5], 0, 4))
+
+// Not Working
+// const mergeSort = (arr, low, mid, high) => {
+//     let arr1 = [];
+//     let arr2 = [];
+//     for (let i = low; i <= mid; i++) {
+//         arr1.push(arr[i]);
+//     }
+
+//     for (let i = mid + 1; i <= high; i++) {
+//         arr2.push(arr[i]);
+//     }
+
+//     let i = 0;
+//     let j = 0;
+//     let k = low;
+//     let count = 0;
+
+//     while (i < arr1.length && j < arr2.length) {
+//         if (arr1[i] < arr2[j]) {
+//             arr[k] = arr1[i];
+//             k++
+//             i++;
+//         } else {
+//             arr[k] = arr2[j];
+//             k++
+//             j++;
+//             // const totalPending = (mid + 1) - (low + i);
+//             count += (mid + 1) - (low + i);
+//         }
+//     }
+
+//     while (i < arr1.length) {
+//         arr[k] = arr1[i]
+//         i++
+//         k++;
+//     }
+//     while (j < arr2.length) {
+//         arr[k] = arr2[j]
+//         j++
+//         k++;
+//     }
+//     return count;
+
+// }
+
+
+
+
+// function mergeSortArr(arr, low = 0, high = arr.length - 1) {
+//     let count = 0;
+
+//     if (low >= high) return count;
+//     // if (low < high) {
+//     let midPoint = Math.floor((low + high) / 2);
+//     count += mergeSortArr(arr, low, midPoint)
+//     count += mergeSortArr(arr, midPoint + 1, high)
+//     count += mergeSort(arr, low, midPoint, high);
+//     // }
+
+
+//     return count;
+// }
+
+
+
+
+console.log(mergeSortArr([2, 4, 1, 3, 5]))

@@ -32,4 +32,4 @@ function mergeSort(arr) {
     return merge(left, right);
 }
 
-mergeSort([2, 1, 4, 5, 7, 6, 45, 86, 1321, 0, 12, 864, 23133, 02, 5646])
+mergeSort([2, 1, 4, 5, 7, 6, 45, 86, 1321, 0, 12, 864, 23133, 2, 5646])

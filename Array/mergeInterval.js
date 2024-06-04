@@ -54,4 +54,30 @@ function mergeInterval2(intervals) {
 
 }
 
-console.log(mergeInterval2([[1, 3], [2, 6], [8, 10], [15, 18]]));
+// console.log(mergeInterval2([[1, 3], [2, 6], [8, 10], [15, 18]]));
+
+
+function mergeInterval3(arr) {
+    let sortedArr = arr.sort(function (a, b) {
+        if (a[0] === b[0]) {
+            return a[1] - b[1]
+        }
+        return a[0] - b[0]
+    })
+
+    let res = [sortedArr[0]];
+
+    for (let i = 1; i < sortedArr.length; i++) {
+        const curr = sortedArr[i];
+        let prev = res[res.length - 1];
+        if (prev[1] >= curr[0]) {
+            prev[1] = Math.max(curr[1], prev[1])
+            res[res.length - 1] = prev;
+        } else {
+            res.push(curr);
+        }
+    }
+    return res;
+}
+
+console.log(mergeInterval3([[1, 3], [2, 6], [8, 9], [9, 11], [8, 10], [2, 4], [15, 18], [16, 17]]))
